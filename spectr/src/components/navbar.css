@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@font-face {
+  font-family: "font2";
+  src: url("./../fonts/font2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font3";
+  src: url("./../fonts/font3.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+.navbar {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(30px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 90px; 
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 30px;
+
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 0 auto; 
+}
+
+.navleft a,
+.navright a {
+  text-decoration: none;
+  color: black;
+   font-family: 'IBM Plex Mono', monospace; 
+  
+  margin: 0 20px; 
+  line-height: 90px; 
+  transition: color 0.2s, transform 0.2s;
+  
+}
+
+.navleft a:hover,
+.navright a:hover {
+  color: #555;
+  transform: scale(1.05); 
+}
+
+.navcenter .logo {
+  font-family: "font3", sans-serif;
+  font-size: 4rem; 
+  letter-spacing: 4px;
+  color: black;
+  display: flex;
+  align-items: center;
+  height: 100%; 
+  
+}
+
+.navcenter .mirror {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+.navright a svg {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 5px;
+  line-height: 90px; 
+}
+
+.navright {
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar { display: none; }
+  .nav2 { display: block; }
+}
+
+@media (min-width: 769px) {
+  .navbar { display: block; }
+  .nav2 { display: none; }
+}
