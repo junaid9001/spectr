@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import { Productcontext } from "./createcontext";
 import axios from "axios";
+import "./admcss/addpro.css";
 
 export default function AdminNewproduct() {
   const [name, setname] = useState("");
@@ -17,17 +18,33 @@ export default function AdminNewproduct() {
     e.preventDefault();
     if (pcontext.some((p) => p.name === name && p.brand === brand)) {
       alert("duplicate products not allowed");
+    } else if ((name, price, image,brand,category,description,feature).length < 1) {
+      alert("What are u doing?");
+      return;
     } else {
-      axios.post("http://localhost:4006/products", {
-        name: name,
-        price: price,
-        img: image,
-        brand: brand,
-        category: category,
-        description: description,
-        feature: feature,
-        active: true,
-      });
+      axios
+        .post("http://localhost:4006/products", {
+          name: name,
+          price: price,
+          img: image,
+          brand: brand,
+          category: category,
+          description: description,
+          feature: feature,
+          active: true,
+        })
+        .then(() => {
+          setname("");
+          setprice("");
+          setimage("");
+          setbrand("");
+          setcategory("");
+          setdescription("");
+          setfeature("");
+          return axios
+            .get("http://localhost:4006/products")
+            .then((res) => setpcontext(res.data));
+        });
     }
     axios
       .get("http://localhost:4006/products")
@@ -36,7 +53,8 @@ export default function AdminNewproduct() {
 
   return (
     <>
-      <form onSubmit={handlesubmit}>
+      <h1 style={{ textAlign: "center", color: "black" }}>Add product</h1>
+      <form onSubmit={handlesubmit} className="newproform">
         <label>name</label>
         <input
           type="text"

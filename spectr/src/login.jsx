@@ -37,8 +37,10 @@ export default function Login() {
       localStorage.setItem("user", JSON.stringify(user));
       if (user.active && user.role === "admin") {
         navigate("/admin");
+        window.location.reload();
       } else if (user.active && user.role === "user") {
         navigate("/");
+        window.location.reload();
       }
     } catch (err) {
       console.log(err);

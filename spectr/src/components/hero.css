@@ -86,33 +86,30 @@
 }
 
 
-@media screen and (max-width: 1200px) {
-  .side-image,
+
+@media  (max-width: 1249px) {
+
+  .hero {
+    
+    padding-top: 80px; 
+  }
+  .side-image {
+    width: 40vw;      
+    right: 8%;        
+    margin-right: -5%; 
+  }
+
   .model-image {
-    width: 450px;
-    margin: 0 -100px;
+    width: 40vw;
+    left: 8%;
+    margin-left: -5%;
   }
 
   .hero-slogan {
-    font-size: 3rem;
+    font-size: 42vw;  
+    line-height: 1;
   }
+
+
+
 }
-
-@media screen and (max-width: 768px) {
-  .hero-images {
-    flex-direction: column;
-  }
-
-  .side-image,
-  .model-image {
-    width: 300px;
-    margin: 10px 0;
-    transform: none; 
-  }
-
-  .hero-slogan {
-    font-size: 2.2rem;
-  }
-}
-
-

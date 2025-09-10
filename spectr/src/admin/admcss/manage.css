@@ -1,11 +1,4 @@
 
-.productmanage {
-  padding: 24px;
-  font-family: "Inter", sans-serif;
-  background: #f9fafb;
-  min-height: 100vh;
-}
-
 .producthead {
   font-size: 28px;
   font-weight: 600;
@@ -42,18 +35,17 @@
 
 .admproductcard {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: transparent;
   padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
+  border-bottom: 1px solid #e6e3e3;
+  box-sizing: border-box;
+
 }
 
-.admproductcard:hover {
-  transform: translateY(-2px);
-}
+
 
 .productimg {
   height: 60px;
@@ -65,12 +57,14 @@
 .productinfo {
   flex: 1;
   margin-left: 16px;
+  min-width: 0;
 }
 
 .productinfo h3 {
   font-size: 16px;
   margin: 0;
   font-weight: 600;
+  color: #000000;
 }
 
 .productinfo p {
@@ -114,7 +108,7 @@
   cursor: pointer;
   top: 0; left: 0;
   right: 0; bottom: 0;
-  background-color: #d1d5db;
+  background-color:#ef4444;
   transition: .3s;
   border-radius: 24px;
 }
@@ -131,7 +125,7 @@
 }
 
 .switch input:checked + .slider {
-  background-color: #000000;
+  background-color:#22c55e;
 }
 
 .switch input:checked + .slider:before {
@@ -140,8 +134,9 @@
 
 .status-text {
   font-size: 13px;
-  color: #374151;
+  color: #000000;
   min-width: 70px;
+  font-family: sans-serif;
 }
 
 

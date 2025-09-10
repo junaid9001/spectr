@@ -22,7 +22,6 @@ export default function Profile() {
 
     axios.patch(`http://localhost:4006/users/${user}`, {
       cart: [],
-      orders: [],
     });
     hi("/login");
   }
@@ -42,7 +41,12 @@ export default function Profile() {
               <p>
                 <strong>Email:</strong> {item.email}
               </p>
-              {item.role==="admin"&& <p><strong>Role: </strong>{item.role}</p>}
+              {item.role === "admin" && (
+                <p>
+                  <strong>Role: </strong>
+                  {item.role}
+                </p>
+              )}
             </div>
 
             <h2 className="ordertitle">Recent Orders</h2>
@@ -50,8 +54,23 @@ export default function Profile() {
               <ul className="orderlist">
                 {item.orders.map((order, index) => (
                   <li key={index} className="orderitem">
-                    {order.name} × {order.quantity} = $
-                    {order.price * order.quantity}
+                    <div className="orderproducts">
+                      {order.items?.map((product) => (
+                        <p key={product.id}>
+                          {product.name} × {product.quantity} ={" "}
+                          {product.price * product.quantity}
+                        </p>
+                      ))}
+                    </div>
+                    <p>
+                      <strong>Total:</strong>{" "}
+                      {order.items.reduce(
+                        (sum, product) =>
+                          sum + product.price * product.quantity,
+                        0
+                      )}
+                    </p>
+                    <hr />
                   </li>
                 ))}
               </ul>

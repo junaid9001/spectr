@@ -7,13 +7,19 @@ import { CiSearch } from "react-icons/ci";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Wishlistcontext } from "./admin/createcontext";
-
+import { Cartcontext } from "./admin/createcontext";
+import { CiHeart } from "react-icons/ci";
+import ReactPaginate from "react-paginate";
 export default function Store() {
   const { setwcontext } = useContext(Wishlistcontext);
+  const { setccontext } = useContext(Cartcontext);
   const [product, setproduct] = useState([]);
   const [search, setsearch] = useState("");
   const [brand, setbrand] = useState("");
   const [sort, setsort] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const productsPerPage = 10;
 
   useEffect(() => {
     axios
@@ -44,6 +50,7 @@ export default function Store() {
       .patch(`http://localhost:4006/users/${user.id}`, { cart: updatedcart })
       .then((res) => {
         const updateuser = { ...user, cart: res.data.cart };
+        setccontext(res.data.cart);
         localStorage.setItem("user", JSON.stringify(updateuser));
         toast("item added to cart", {
           autoClose: 500,
@@ -95,8 +102,10 @@ export default function Store() {
   }
 
   let filtered = product
-    .filter((item) =>
-      item.active&&item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    .filter(
+      (item) =>
+        item.active &&
+        item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
     )
     .filter((item) => (brand === "" ? true : item.brand === brand));
   if (sort === "low-high") {
@@ -104,6 +113,12 @@ export default function Store() {
   } else if (sort === "high-low") {
     filtered = [...filtered].sort((a, b) => b.price - a.price);
   }
+
+  {/*const pageCount = Math.ceil(filtered.length / productsPerPage);
+  const currentProducts = filtered.slice(
+    currentPage * productsPerPage,
+    (currentPage + 1) * productsPerPage
+  );*/}
 
   return (
     <>
@@ -145,7 +160,21 @@ export default function Store() {
           {filtered.map((item) => (
             <div key={item.id} className="productcard">
               <Link to={`/product_details/${item.id}`} className="productlink">
-                <img src={item.img} alt={item.name} className="productimage" />
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className="productimage"
+                />
+                <span
+                  className="wishicon"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handlewishlist(item);
+                  }}
+                  
+                >
+                  <CiHeart size={"25px"} color="grey"></CiHeart>
+                </span>
                 <h2 className="product-name">{item.name}</h2>
                 <p className="product-price">₹{item.price}</p>
               </Link>
@@ -154,6 +183,18 @@ export default function Store() {
             </div>
           ))}
         </div>
+
+        {/*<ReactPaginate
+          previousLabel={"← Previous"}
+          nextLabel={"Next →"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          onPageChange={(selected) => setCurrentPage(selected.selected)}
+          containerClassName={"pagination"}
+          activeClassName={"active"}
+        />*/}
       </div>
       <ToastContainer />
     </>

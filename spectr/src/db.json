@@ -5,18 +5,315 @@
       "username": "admin",
       "email": "a@a",
       "password": "admin123",
-      "cart": [],
-      "wishlist": [
+      "cart": [
         {
-          "id": 1,
-          "p": "hello"
-        },
-        {
-          "id": 2,
-          "p": "hai"
+          "productid": "1",
+          "quantity": 8
         }
       ],
-      "orders": [],
+      "wishlist": [
+        {
+          "id": "2",
+          "name": "Ray-Ban Meta Wayfarer Smart",
+          "price": 45000,
+          "img": "/images/item8a.webp",
+          "imga": "/images/item8a.webp",
+          "brand": "Ray-Ban Meta",
+          "category": "smart_glasses",
+          "description": "Classic Wayfarer style meets cutting-edge AR technology. These smart glasses let you stay connected, capture moments, and interact with digital content seamlessly while maintaining iconic Ray-Ban style.",
+          "features": [
+            "Built-in AR display",
+            "Voice assistant integration",
+            "Bluetooth audio and calls",
+            "Camera for photo and video capture",
+            "Touch control on frame",
+            "Lightweight comfortable design",
+            "Stylish Wayfarer aesthetic"
+          ],
+          "active": true
+        }
+      ],
+      "orders": [
+        {
+          "items": [
+            {
+              "id": "1",
+              "name": "Dystopian Verge, bold spirit",
+              "price": 60000,
+              "img": "/images/item101.png",
+              "imga": "/images/item13a.png",
+              "brand": "Dystopian Verge",
+              "category": "sunglasses",
+              "description": "Bold and futuristic, these glasses embody a post-apocalyptic aesthetic with sharp angles, sleek carbon fiber frames, and a striking visual presence. Perfect for fashion-forward individuals seeking an avant-garde statement.",
+              "features": [
+                "Carbon fiber lightweight frame",
+                "Futuristic angular design",
+                "UV400 protection lenses",
+                "Anti-glare coating",
+                "Adjustable nose pads",
+                "Bold fashion statement",
+                "High durability"
+              ],
+              "active": true,
+              "quantity": 2
+            },
+            {
+              "id": "2",
+              "name": "Ray-Ban Meta Wayfarer Smart",
+              "price": 45000,
+              "img": "/images/item8a.webp",
+              "imga": "/images/item8a.webp",
+              "brand": "Ray-Ban Meta",
+              "category": "smart_glasses",
+              "description": "Classic Wayfarer style meets cutting-edge AR technology. These smart glasses let you stay connected, capture moments, and interact with digital content seamlessly while maintaining iconic Ray-Ban style.",
+              "features": [
+                "Built-in AR display",
+                "Voice assistant integration",
+                "Bluetooth audio and calls",
+                "Camera for photo and video capture",
+                "Touch control on frame",
+                "Lightweight comfortable design",
+                "Stylish Wayfarer aesthetic"
+              ],
+              "active": true,
+              "quantity": 2
+            },
+            {
+              "id": "3",
+              "name": "Gentle Monster Milky Way 02P",
+              "price": 47000,
+              "img": "/images/item10a.png",
+              "imga": "/images/item10a.png",
+              "brand": "Gentle Monster",
+              "category": "sunglasses",
+              "description": "Ultra-modern lensless design for a futuristic look. These glasses are perfect for high-fashion events, photoshoots, and statement-making appearances.",
+              "features": [
+                "Lensless transparent frame",
+                "Oversized futuristic design",
+                "Lightweight construction",
+                "Durable high-quality material",
+                "Avant-garde fashion statement",
+                "Comfortable fit",
+                "Perfect for creative styling"
+              ],
+              "active": true,
+              "quantity": 3
+            }
+          ],
+          "addressdetail": {
+            "name": "rrr",
+            "address": "rrrrr",
+            "card": "rrrrr"
+          }
+        },
+        {
+          "items": [
+            {
+              "id": "2",
+              "name": "Ray-Ban Meta Wayfarer Smart",
+              "price": 45000,
+              "img": "/images/item8a.webp",
+              "imga": "/images/item8a.webp",
+              "brand": "Ray-Ban Meta",
+              "category": "smart_glasses",
+              "description": "Classic Wayfarer style meets cutting-edge AR technology. These smart glasses let you stay connected, capture moments, and interact with digital content seamlessly while maintaining iconic Ray-Ban style.",
+              "features": [
+                "Built-in AR display",
+                "Voice assistant integration",
+                "Bluetooth audio and calls",
+                "Camera for photo and video capture",
+                "Touch control on frame",
+                "Lightweight comfortable design",
+                "Stylish Wayfarer aesthetic"
+              ],
+              "active": true,
+              "quantity": 3
+            },
+            {
+              "id": "3",
+              "name": "Gentle Monster Milky Way 02P",
+              "price": 47000,
+              "img": "/images/item10a.png",
+              "imga": "/images/item10a.png",
+              "brand": "Gentle Monster",
+              "category": "sunglasses",
+              "description": "Ultra-modern lensless design for a futuristic look. These glasses are perfect for high-fashion events, photoshoots, and statement-making appearances.",
+              "features": [
+                "Lensless transparent frame",
+                "Oversized futuristic design",
+                "Lightweight construction",
+                "Durable high-quality material",
+                "Avant-garde fashion statement",
+                "Comfortable fit",
+                "Perfect for creative styling"
+              ],
+              "active": true,
+              "quantity": 2
+            },
+            {
+              "id": "9",
+              "name": "Gentle Monster Third Kind C1",
+              "price": 48000,
+              "img": "/images/item4.png",
+              "imga": "/images/item4a.png",
+              "brand": "Gentle Monster",
+              "category": "sunglasses",
+              "description": "Sleek, modern glasses with minimalist yet futuristic frame design. Perfect for daily wear with a style-forward edge.",
+              "features": [
+                "Minimalist futuristic frame",
+                "Lightweight acetate",
+                "UV protection lenses",
+                "Ergonomic fit",
+                "Durable construction",
+                "Everyday style-forward look",
+                "High-quality craftsmanship"
+              ],
+              "active": true,
+              "quantity": 2
+            },
+            {
+              "id": "8",
+              "name": "Gentle Monster x Warcraft",
+              "price": 50000,
+              "img": "/images/item3a.png",
+              "imga": "/images/item3a.png",
+              "brand": "Gentle Monster",
+              "category": "sunglasses",
+              "description": "Inspired by World of Warcraft, these glasses combine gaming fantasy with futuristic fashion, featuring bold lines and intricate detailing.",
+              "features": [
+                "Gaming-inspired design",
+                "Futuristic frame style",
+                "High-quality materials",
+                "UV400 lens protection",
+                "Lightweight and comfortable",
+                "Collector’s edition aesthetic",
+                "Unique collaboration detailing"
+              ],
+              "active": true,
+              "quantity": 1
+            },
+            {
+              "id": "7",
+              "name": "XREAL One Pro AR Glasses",
+              "price": 60000,
+              "img": "/images/item102.png",
+              "imga": "/images/item2a.png",
+              "brand": "XREAL",
+              "category": "smart_glasses",
+              "description": "AR glasses designed for immersive experiences, offering high-resolution display and intuitive gesture controls for a futuristic wearable experience.",
+              "features": [
+                "Augmented reality display",
+                "Gesture-based control",
+                "Lightweight design",
+                "HD resolution visuals",
+                "Compatible with multiple devices",
+                "Stylish modern frame",
+                "Comfortable extended wear"
+              ],
+              "active": true,
+              "quantity": 2
+            },
+            {
+              "id": "11",
+              "name": "Rokid Air AR Glasses",
+              "price": 55000,
+              "img": "/images/item7.png",
+              "imga": "/images/item7a.png",
+              "brand": "Rokid",
+              "category": "smart_glasses",
+              "description": "AR glasses that combine sleek modern design with immersive display technology for interactive entertainment and productivity.",
+              "features": [
+                "High-definition AR display",
+                "Voice interaction support",
+                "Lightweight ergonomic design",
+                "Interactive apps support",
+                "Bluetooth connectivity",
+                "Comfortable for long wear",
+                "Futuristic aesthetic"
+              ],
+              "active": true,
+              "quantity": 3
+            },
+            {
+              "id": "14",
+              "name": "Dystopian Verge, carbon black",
+              "price": 62000,
+              "img": "/images/item14.png",
+              "imga": "/images/item14a.png",
+              "brand": "Dystopian Verge",
+              "category": "sunglasses",
+              "description": "Futuristic bold carbon black glasses with strong posthuman styling, perfect for statement looks and avant-garde fashion.",
+              "features": [
+                "Carbon fiber frame",
+                "Matte black finish",
+                "UV protection lenses",
+                "Lightweight design",
+                "Futuristic sculptural aesthetic",
+                "High durability",
+                "Bold fashion statement"
+              ],
+              "active": true,
+              "quantity": 2
+            },
+            {
+              "id": "17",
+              "name": "MYKITA 032c CO BEAR",
+              "price": 53000,
+              "img": "/images/item17.png",
+              "imga": "/images/item17a.png",
+              "brand": "MYKITA",
+              "category": "sunglasses",
+              "description": "Modern luxury sunglasses with bold shapes and durable materials, combining comfort and high-fashion aesthetics.",
+              "features": [
+                "Bold geometric design",
+                "High-quality acetate frame",
+                "UV400 lens protection",
+                "Lightweight and comfortable",
+                "Durable construction",
+                "Modern luxury aesthetic",
+                "Perfect for daily wear and fashion statement"
+              ],
+              "active": true,
+              "quantity": 2
+            }
+          ],
+          "addressdetail": {
+            "name": "rtr",
+            "address": "ttrrt",
+            "card": "trtr"
+          }
+        },
+        {
+          "items": [
+            {
+              "id": "2",
+              "name": "Ray-Ban Meta Wayfarer Smart",
+              "price": 45000,
+              "img": "/images/item8a.webp",
+              "imga": "/images/item8a.webp",
+              "brand": "Ray-Ban Meta",
+              "category": "smart_glasses",
+              "description": "Classic Wayfarer style meets cutting-edge AR technology. These smart glasses let you stay connected, capture moments, and interact with digital content seamlessly while maintaining iconic Ray-Ban style.",
+              "features": [
+                "Built-in AR display",
+                "Voice assistant integration",
+                "Bluetooth audio and calls",
+                "Camera for photo and video capture",
+                "Touch control on frame",
+                "Lightweight comfortable design",
+                "Stylish Wayfarer aesthetic"
+              ],
+              "active": true,
+              "quantity": 1
+            }
+          ],
+          "addressdetail": {
+            "name": "kn",
+            "address": "nn",
+            "card": "jj"
+          }
+        }
+      ],
       "role": "admin",
       "active": true
     },
@@ -25,10 +322,235 @@
       "username": "bb",
       "email": "b@b",
       "password": "1234",
-      "cart": [],
-      "wishlist": [],
+      "cart": [
+        {
+          "productid": "14",
+          "quantity": 1
+        },
+        {
+          "productid": "3",
+          "quantity": 1
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "2",
+          "name": "Ray-Ban Meta Wayfarer Smart",
+          "price": 45000,
+          "img": "/images/item8a.webp",
+          "imga": "/images/item8a.webp",
+          "brand": "Ray-Ban Meta",
+          "category": "smart_glasses",
+          "description": "Classic Wayfarer style meets cutting-edge AR technology. These smart glasses let you stay connected, capture moments, and interact with digital content seamlessly while maintaining iconic Ray-Ban style.",
+          "features": [
+            "Built-in AR display",
+            "Voice assistant integration",
+            "Bluetooth audio and calls",
+            "Camera for photo and video capture",
+            "Touch control on frame",
+            "Lightweight comfortable design",
+            "Stylish Wayfarer aesthetic"
+          ],
+          "active": true
+        },
+        {
+          "id": "1",
+          "name": "Dystopian Verge, bold spirit",
+          "price": "600000",
+          "img": "/images/item101.png",
+          "imga": "/images/item13a.png",
+          "brand": "Dystopian Verge",
+          "category": "sunglasses",
+          "description": "Bold and futuristic, these glasses embody a post-apocalyptic aesthetic with sharp angles, sleek carbon fiber frames, and a striking visual presence. Perfect for fashion-forward individuals seeking an avant-garde statement.",
+          "features": [
+            "Carbon fiber lightweight frame",
+            "Futuristic angular design",
+            "UV400 protection lenses",
+            "Anti-glare coating",
+            "Adjustable nose pads",
+            "Bold fashion statement",
+            "High durability"
+          ],
+          "active": true
+        }
+      ],
       "role": "user",
-      "orders": [],
+      "orders": [
+        {
+          "items": [
+            {
+              "id": "2",
+              "name": "Ray-Ban Meta Wayfarer Smart",
+              "price": 45000,
+              "img": "/images/item8a.webp",
+              "imga": "/images/item8a.webp",
+              "brand": "Ray-Ban Meta",
+              "category": "smart_glasses",
+              "description": "Classic Wayfarer style meets cutting-edge AR technology. These smart glasses let you stay connected, capture moments, and interact with digital content seamlessly while maintaining iconic Ray-Ban style.",
+              "features": [
+                "Built-in AR display",
+                "Voice assistant integration",
+                "Bluetooth audio and calls",
+                "Camera for photo and video capture",
+                "Touch control on frame",
+                "Lightweight comfortable design",
+                "Stylish Wayfarer aesthetic"
+              ],
+              "active": true,
+              "quantity": 2
+            }
+          ],
+          "addressdetail": {
+            "name": "ee",
+            "address": "eee",
+            "card": "eee"
+          }
+        },
+        {
+          "items": [
+            {
+              "id": "1",
+              "name": "Dystopian Verge, bold spirit",
+              "price": 60000,
+              "img": "/images/item101.png",
+              "imga": "/images/item13a.png",
+              "brand": "Dystopian Verge",
+              "category": "sunglasses",
+              "description": "Bold and futuristic, these glasses embody a post-apocalyptic aesthetic with sharp angles, sleek carbon fiber frames, and a striking visual presence. Perfect for fashion-forward individuals seeking an avant-garde statement.",
+              "features": [
+                "Carbon fiber lightweight frame",
+                "Futuristic angular design",
+                "UV400 protection lenses",
+                "Anti-glare coating",
+                "Adjustable nose pads",
+                "Bold fashion statement",
+                "High durability"
+              ],
+              "active": true,
+              "quantity": 5
+            },
+            {
+              "id": "3",
+              "name": "Gentle Monster Milky Way 02P",
+              "price": 47000,
+              "img": "/images/item10a.png",
+              "imga": "/images/item10a.png",
+              "brand": "Gentle Monster",
+              "category": "sunglasses",
+              "description": "Ultra-modern lensless design for a futuristic look. These glasses are perfect for high-fashion events, photoshoots, and statement-making appearances.",
+              "features": [
+                "Lensless transparent frame",
+                "Oversized futuristic design",
+                "Lightweight construction",
+                "Durable high-quality material",
+                "Avant-garde fashion statement",
+                "Comfortable fit",
+                "Perfect for creative styling"
+              ],
+              "active": true,
+              "quantity": 3
+            }
+          ],
+          "addressdetail": {
+            "name": "th",
+            "address": "h5",
+            "card": "h5"
+          }
+        },
+        {
+          "items": [
+            {
+              "id": "5",
+              "name": "Gentle Monster x TEKKEN 8",
+              "price": 52000,
+              "img": "/images/item100.png",
+              "imga": "/images/item6a.png",
+              "brand": "Gentle Monster",
+              "category": "sunglasses",
+              "description": "Inspired by TEKKEN 8, these sunglasses feature aggressive futuristic styling with premium materials and bold detailing for a standout appearance.",
+              "features": [
+                "Premium acetate frame",
+                "Unique TEKKEN collaboration design",
+                "UV400 lens protection",
+                "Ergonomic fit",
+                "Bold futuristic aesthetic",
+                "Durable construction",
+                "Perfect for collectors and fans"
+              ],
+              "active": true,
+              "quantity": 1
+            },
+            {
+              "id": "10",
+              "name": "Lenovo ThinkReality A3 Smart",
+              "price": 70000,
+              "img": "/images/item5.png",
+              "imga": "/images/item5a.png",
+              "brand": "Lenovo",
+              "category": "smart_glasses",
+              "description": "AR smart glasses built for productivity, featuring dual displays, voice commands, and lightweight ergonomic design for extended use.",
+              "features": [
+                "Dual AR displays",
+                "Voice command integration",
+                "Lightweight ergonomic frame",
+                "HD visuals and graphics",
+                "Bluetooth connectivity",
+                "Long battery life",
+                "Professional and stylish"
+              ],
+              "active": true,
+              "quantity": 1
+            },
+            {
+              "id": "7",
+              "name": "XREAL One Pro AR Glasses",
+              "price": 60000,
+              "img": "/images/item102.png",
+              "imga": "/images/item2a.png",
+              "brand": "XREAL",
+              "category": "smart_glasses",
+              "description": "AR glasses designed for immersive experiences, offering high-resolution display and intuitive gesture controls for a futuristic wearable experience.",
+              "features": [
+                "Augmented reality display",
+                "Gesture-based control",
+                "Lightweight design",
+                "HD resolution visuals",
+                "Compatible with multiple devices",
+                "Stylish modern frame",
+                "Comfortable extended wear"
+              ],
+              "active": true,
+              "quantity": 1
+            },
+            {
+              "id": "4",
+              "name": "Clash de Cartier Precious",
+              "price": 130000,
+              "img": "/images/item11.png",
+              "imga": "/images/item11a.png",
+              "brand": "Cartier",
+              "category": "sunglasses",
+              "description": "Luxury eyewear with precious metal details and bold geometric design. These sunglasses blend elegance with a futuristic edge for a sophisticated yet daring look.",
+              "features": [
+                "High-quality acetate frame",
+                "Geometric futuristic design",
+                "Gold-plated accents",
+                "UV protection lenses",
+                "Comfortable fit",
+                "Durable and stylish",
+                "Elegant and bold statement"
+              ],
+              "active": true,
+              "quantity": 1
+            }
+          ],
+          "addressdetail": {
+            "name": "vvvvvvvvvvvvvvv",
+            "address": "vvvvvvvvvvvvvvvvvvvv",
+            "card": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
+          }
+        }
+      ],
       "active": true
     },
     {
@@ -47,7 +569,7 @@
     {
       "id": "1",
       "name": "Dystopian Verge, bold spirit",
-      "price": 60000,
+      "price": "600000",
       "img": "/images/item101.png",
       "imga": "/images/item13a.png",
       "brand": "Dystopian Verge",
@@ -443,12 +965,23 @@
         "Perfect for statement looks"
       ],
       "active": true
+    },
+    {
+      "id": "c2e0",
+      "name": "rrr",
+      "price": "rrr",
+      "img": "/images/item14a.png",
+      "brand": "rrr",
+      "category": "rrr",
+      "description": "rrr",
+      "feature": "rr",
+      "active": true
     }
   ],
   "total": [
     {
       "id": "1",
-      "totalsales": 154980000
+      "totalsales": 102560698000
     }
   ],
   "orders": []

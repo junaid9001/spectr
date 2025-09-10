@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import './admcss/layout.css'
+import "./admcss/layout.css";
+import { CiMenuFries } from "react-icons/ci";
 
 export default function AdminLayout() {
+  const [showside, setshowside] = useState(false);
   const navigate = useNavigate();
   function handlelogout() {
     localStorage.removeItem("user");
@@ -11,15 +13,20 @@ export default function AdminLayout() {
   return (
     <>
       <div className="admcontainer">
-        <aside className="admaside">
+        <div className="menuicon" onClick={() => setshowside(!showside)}>
+          <CiMenuFries size={30} />
+        </div>
+        <aside className={`admaside ${showside ? "active" : ""}`}>
+          <h1 className="admlogo">
+            SPECT<span className="admmirror">R</span>
+          </h1>
           <nav>
-            <h1 className="admlogo">
-              SPECT<span className="admmirror">R</span>
-            </h1>
             <ul>
               <li>
                 {" "}
-                <NavLink to={"/admin"}>Dashboard</NavLink>
+                <NavLink to={"/admin"} end>
+                  Dashboard
+                </NavLink>
               </li>
               <li>
                 {" "}
@@ -44,7 +51,7 @@ export default function AdminLayout() {
           </button>
         </aside>
 
-        <main className="admmain">
+        <main className="admmain" onClick={() => setshowside(false)}>
           <Outlet />
         </main>
       </div>

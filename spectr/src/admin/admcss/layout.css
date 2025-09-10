@@ -1,97 +1,129 @@
+
 .admcontainer {
   display: flex;
-  width: 100%;
   height: 100vh;
-  background: #f3f4f6;
+  width: 100%;
+  font-family: 'Michroma', sans-serif;
+  background-color: #f3f4f6;
+  color: rgb(80, 80, 80);
+  overflow-x: hidden;
 }
 
-.admaside nav {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: flex-start;
+.menuicon{
+  display: none;
 }
 
 .admaside {
-  color: black;
-  background: #bdc2cc;
+  width: 250px;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-right: 1px solid rgba(207, 205, 205, 0.353);
   display: flex;
   flex-direction: column;
-  width: 240px;
-  justify-content: space-between;
-  padding: 40px 20px 20px; 
 }
 
 .admlogo {
-  display: block;
-  margin-bottom: 40px;
-  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "font3";
+  color: black;
 }
 
 .admmirror {
-  display: inline-block;
   transform: scaleX(-1);
+  display: inline-block;
 }
 
 .admaside nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .admaside nav ul li {
-  margin: 0;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .admaside nav ul li a {
   text-decoration: none;
   color: black;
-  font-size: 16px;
-  padding: 10px 12px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-.admaside nav ul li a:hover {
-  background: #9ca3af;
-  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+  font-family:  "Orbitron";
 }
 
 .admaside nav ul li a.active {
-  background: #ebedf1;
-  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
+
+.admaside nav ul li:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: rgb(181, 181, 181);
+  margin-top: 8px;
+}
+
+
 .admlogout {
   margin-top: auto;
-  padding: 10px 15px;
-  background: #000000;
+  padding: 10px;
   border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 16px;
+  background-color: black;
+  color: #f3f4f6;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'Michroma', sans-serif;
+  transition: 0.3s;
 }
 
 .admlogout:hover {
-  background: #dc2626;
-  transform: scale(1.05);
+  background-color: #333;
 }
 
-.admlogout {
-  width: 100%;
-  text-align: center;
-}
 
 .admmain {
   flex: 1;
-  padding: 30px;
+  padding: 20px;
   overflow-y: auto;
-  background: #f9fafb;
+  background-color: #f3f4f6;
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .admaside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 100;
+    width: 200px;
+  }
+
+  .admaside.active {
+    transform: translateX(0);
+  }
+
+  .menuicon {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 200;
+    cursor: pointer;
+    color: #111827;
+  }
+
+  .admmain {
+    padding: 20px;
+    transition: filter 0.3s ease;
+  }
+
+  
+  .admaside.active ~ .admmain {
+    filter: blur(2px);
+  }
 }

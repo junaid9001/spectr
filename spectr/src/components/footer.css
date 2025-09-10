@@ -1,0 +1,43 @@
+.footer {
+  background: #fdfdff;
+  padding: 20px 20px;
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  width: 100vw;
+  height: 15vh;
+  
+  box-sizing: border-box;
+  border-top: 1px solid rgba(211, 211, 211, 0.523);
+}
+
+.footerbrand h1 {
+  font-family: "font3", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.footerlinks a {
+  margin: 0 10px;
+  text-decoration: none;
+  color:#555;
+  transition: color 0.2s;
+  font-weight:20px;
+  font-size: small;
+}
+
+.footerlinks a:hover {
+  color: #555;
+}
+
+.footerinfo p {
+  margin: 5px 0;
+  font-size: 0.7rem;
+  color: #555;
+  letter-spacing: 2px;
+}
+
+.footer .mirror {
+  transform: scaleX(-1);
+}
+

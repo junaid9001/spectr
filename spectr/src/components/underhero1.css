@@ -70,3 +70,29 @@
 .right-text {
   right: 7%;
 }
+
+@media (max-width: 1360px){
+ .side-text{
+  font-size: 13vh;
+ }
+}
+
+@media (max-width: 1036px){
+
+   .side-text{
+  font-size: 10vh;
+ }
+}
+
+
+@media (max-width: 807px){
+    .side-text{
+  font-size: 6vh;
+ }
+}
+
+@media (max-width: 479px){
+  .side-text{
+  font-size: 4vh;
+ }
+}

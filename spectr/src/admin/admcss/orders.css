@@ -1,0 +1,43 @@
+.orders-container {
+  padding: 20px;
+  font-family: sans-serif;
+  color: #000000;
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+.ordertitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #000000;
+  font-family: "Michroma";
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background:transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 18px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.orders-table th {
+  background: #545454;
+  
+  color: #ffffff;
+}
+
+.orders-table tr:hover {
+  background: #f9fafb;
+}
+
+

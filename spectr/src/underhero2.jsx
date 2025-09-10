@@ -22,7 +22,7 @@ export default function Underhero2() {
             className="underhero2video"
           ></video>
           <div className="underherotext">
-            <h2>TEKKEN 8</h2>
+            <h2>TEKKEN </h2>
           </div>
         </Link>
 

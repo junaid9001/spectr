@@ -8,6 +8,7 @@
   background-color: transparent;
   gap: 200px;
   flex-wrap: wrap;
+  
 }
 
 .product-info {
@@ -84,3 +85,13 @@
     text-align: center;
   }
 }
+
+
+@media(max-width:790px){
+  .product-detail{
+    gap:50px;
+    flex-direction: row-reverse;
+  }
+
+}
+

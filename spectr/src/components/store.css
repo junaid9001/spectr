@@ -63,6 +63,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .productimage {
@@ -117,40 +118,52 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .productgrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 786px) {
   .productgrid {
     grid-template-columns: 1fr;
   }
+  .productimage{
+    width: 250px;
+  }
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  list-style: none;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.pagination li {
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.pagination .active {
+  background-color: #111827;
+  color: #fff;
+  font-family: sans-serif;
+  border-color: #111827;
+}
+
+.wishicon {
+  position: absolute;
+  top: 80px;      
+  right: 30px;    
+  z-index: 2;    
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }

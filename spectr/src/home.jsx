@@ -3,6 +3,7 @@ import Navbar from "./components/navbar";
 import Hero from "./hero";
 import Underhero1 from "./underhero1";
 import Underhero2 from "./underhero2";
+import Footer from "./footer";
 
 export default function Home() {
   const loggedinuser = JSON.parse(localStorage.getItem("user"));
@@ -28,7 +29,7 @@ export default function Home() {
           overflowY: "scroll",
           scrollSnapType: "y mandatory",
           scrollBehavior: "smooth",
-          scrollbarWidth: "none", 
+          scrollbarWidth: "none",
         }}
       >
         <Navbar />
@@ -38,10 +39,15 @@ export default function Home() {
         <section style={{ scrollSnapAlign: "start" }}>
           <Underhero1 />
         </section>
-        <section style={{ scrollSnapAlign: "start" }}>
+        <section style={{ scrollSnapAlign: "start"}}>
           <Underhero2 />
         </section>
+        <section style={{scrollSnapAlign:"start"}}>
+          <Footer/>
+        </section>
+        
       </div>
+      
     </>
   );
 }

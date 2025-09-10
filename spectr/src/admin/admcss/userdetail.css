@@ -1,0 +1,76 @@
+.userdetail {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #111827;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1f2937; 
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background-color: #f3f4f6; 
+  border: 1px solid #d1d5db; 
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 6px; 
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.price {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 3px;
+}
+
+.brand {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 3px;
+}
+
+.qty {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.empty {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.active {
+  color: #059669; 
+  font-weight: 600;
+}
+
+.inactive {
+  color: #dc2626; 
+  font-weight: 600;
+}

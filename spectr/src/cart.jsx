@@ -1,11 +1,13 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import './components/cart.css';
+import { Cartcontext } from "./admin/createcontext";
 import Navbar from "./components/navbar";
 
 
 export default function Cart() {
+  const{setccontext}=useContext(Cartcontext)
   const [product, setproduct] = useState([]);
   const [cartitem, setcartitems] = useState([]);
   const user = JSON.parse(localStorage.getItem("user"));
@@ -75,6 +77,7 @@ export default function Cart() {
     const updatedcart = cartitem.filter((item) => item.id !== id);
 
     setcartitems(updatedcart);
+    setccontext(updatedcart);
 
     const updateduser = {
       ...user,
